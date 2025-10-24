@@ -2,7 +2,7 @@
 -------------------------
 ## Reproductor de música y video
 --------------------------------------
-## ↓ Mantenedor 
+## ↓ Colaboradores 
 <h2>
 <a target="_blank" href="https://gitlab.com/keincode" title="Hector Martinez">
 @keincode @joseeljess
