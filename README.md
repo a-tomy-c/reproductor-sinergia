@@ -18,3 +18,5 @@
 
 ![ Sinergia ](src/img/1.png " Sinergia 😋 ")
 
+test: primer commit a-tomy-c
+
