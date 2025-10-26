@@ -23,11 +23,23 @@ class TestVentana(QWidget):
 
         self.ui.btn_1.clicked.connect(self.test_setvideo)
         self.ui.btn_play.clicked.connect(self.player.toggle_playback)
+        self.ui.btn_stop.clicked.connect(self.player.stop)
+        self.player.durationChanged.connect(self._update_duration)
+        self.player.positionChanged.connect(self._update_position)
 
     def test_setvideo(self):
         video1 = "/home/tomy/Vídeos/BATMETAL.mp4"
         self.player.set_media(video1)
         self.player.play()
+
+    def _update_duration(self, duration:int):
+        ts = self.player.msec_to_ts(duration)
+        self.ui.lb_info.setText(f'[DURACION] {duration}|{ts}')
+        self.ui.sld_time.setRange(0, duration)
+
+    def _update_position(self, position:int):
+        self.ui.sld_time.setValue(position)
+        self.ui.lb_time.setText(self.player.msec_to_ts(position))
 
     def closeEvent(self, event):
         self.player.stop()
