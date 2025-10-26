@@ -22,4 +22,10 @@ notas del progreso, info y otros
 
 ### CORE
 - ya agregue el core (funcionamiento basico del player)
+
+### UI
 - el player ya muestra el tiempo recorrido, con el slider y el label
+- slider tiempo al mover ya recorre el tiempo del video
+- slider del volumen, al mover regula el tiempo y lo muestra en el label
+- se puede asignar volumen por defecto, cuando se inicie el player
+

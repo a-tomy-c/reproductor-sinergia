@@ -18,6 +18,7 @@ class TestVentana(QWidget):
         vly.addWidget(self.ui)
 
         self.player = Player()
+        self.volume_initial(80)
         vly_player = QVBoxLayout(self.ui.fm_player)
         vly_player.addWidget(self.player.get_widget())
 
@@ -26,6 +27,8 @@ class TestVentana(QWidget):
         self.ui.btn_stop.clicked.connect(self.player.stop)
         self.player.durationChanged.connect(self._update_duration)
         self.player.positionChanged.connect(self._update_position)
+        self.ui.sld_time.sliderMoved.connect(self.player.setPosition)
+        self.ui.sld_volume.sliderMoved.connect(self._set_volume)
 
     def test_setvideo(self):
         video1 = "/home/tomy/Vídeos/BATMETAL.mp4"
@@ -43,6 +46,14 @@ class TestVentana(QWidget):
 
     def closeEvent(self, event):
         self.player.stop()
+
+    def volume_initial(self, volume:int):
+        self.ui.sld_volume.setValue(volume)
+        self._set_volume(value=volume)
+
+    def _set_volume(self, value:int):
+        self.player.set_volume(value)
+        self.ui.lb_volume.setText(str(value))
 
 
 if __name__ == "__main__":
