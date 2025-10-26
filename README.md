@@ -11,7 +11,7 @@ Reproductor de música y video
 
 ---------------------------------------------------
 
-![ Sinergia ](src/img/1.png " Sinergia 😋 ")
+<!-- ![ Sinergia ](src/img/1.png " Sinergia 😋 ") -->
 
 
 ## NOTAS
