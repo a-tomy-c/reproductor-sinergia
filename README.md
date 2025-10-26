@@ -20,3 +20,6 @@ notas del progreso, info y otros
 
 > (por comodidad colocare notas aqui, luego las movere)
 
+### CORE
+- ya agregue el core (funcionamiento basico del player)
+- el player ya muestra el tiempo recorrido, con el slider y el label
