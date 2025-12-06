@@ -28,4 +28,9 @@ notas del progreso, info y otros
 - slider tiempo al mover ya recorre el tiempo del video
 - slider del volumen, al mover regula el tiempo y lo muestra en el label
 - se puede asignar volumen por defecto, cuando se inicie el player
+- he creado `widget_player` para luego agregarlo al player
+    - first item
+    - last item
+    - drag and drop items
+    
 
