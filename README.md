@@ -28,4 +28,25 @@ notas del progreso, info y otros
 - slider tiempo al mover ya recorre el tiempo del video
 - slider del volumen, al mover regula el tiempo y lo muestra en el label
 - se puede asignar volumen por defecto, cuando se inicie el player
+- he creado `widget_playlist` para luego agregarlo al player
+    - first item
+    - last item
+    - drag and drop items
+    - next item
+    - previous item
+    - move item up
+    - move item down
+- busca entre los nombres del archivo mediante un lineedit
+- le agregue iconos a la playlist
+- agregue widgets (los marcados ya tienen sus modulos)
+    - [ ] widget player
+    - [x] widget playlist
+    - [ ] widget time
+    - [x] widget volume
+    - [ ] widget buttons bar
+- ahora todos los test para los widgets sera desde `test_widgets`
+- agregue mas iconos
+- el widget de volume ya tiene su modulo y esta en el test
+
+
 

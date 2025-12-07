@@ -1,6 +1,6 @@
 from PySide6.QtWidgets import QApplication, QWidget, QVBoxLayout
-from PySide6.QtCore import Qt, QSize
-from PySide6.QtGui import QPixmap
+# from PySide6.QtCore import Qt, QSize
+from PySide6.QtGui import QCloseEvent
 from temporal import TemporalSkin
 from sinergia_core.player import Player
 
@@ -44,8 +44,9 @@ class TestVentana(QWidget):
         self.ui.sld_time.setValue(position)
         self.ui.lb_time.setText(self.player.msec_to_ts(position))
 
-    def closeEvent(self, event):
+    def closeEvent(self, event:QCloseEvent):
         self.player.stop()
+        event.accept()
 
     def volume_initial(self, volume:int):
         self.ui.sld_volume.setValue(volume)
