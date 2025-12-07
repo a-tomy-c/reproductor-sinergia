@@ -1,7 +1,9 @@
 import sys
 from PySide6.QtWidgets import QApplication
 # from ui.widget_playlist import WidgetPlaylist
-from ui.widget_volume import WidgetVolume
+# from ui.widget_volume import WidgetVolume
+# from ui.widget_time import WidgetTime
+from ui.widget_buttons_bar import WidgetButtonsBar
 
 
 if __name__ == "__main__":
@@ -12,6 +14,15 @@ if __name__ == "__main__":
     # playlist.show()
 
     # TEST VOLUME
-    wvol = WidgetVolume()
-    wvol.show()
+    # wvol = WidgetVolume()
+    # wvol.show()
+
+    # TEST TIME
+    # wtime = WidgetTime()
+    # wtime.show()
+
+    # TEST BUTTONS BAR
+    wbbar = WidgetButtonsBar()
+    wbbar.show()
+    
     sys.exit(app.exec())

@@ -41,12 +41,13 @@ notas del progreso, info y otros
 - agregue widgets (los marcados ya tienen sus modulos)
     - [ ] widget player
     - [x] widget playlist
-    - [ ] widget time
+    - [x] widget time
     - [x] widget volume
-    - [ ] widget buttons bar
+    - [x] widget buttons bar
 - ahora todos los test para los widgets sera desde `test_widgets`
 - agregue mas iconos
 - el widget de volume ya tiene su modulo y esta en el test
-
+- el widget de time ya tiene su modulo y esta en el test
+- el widget de buttonsbar ya tiene su modulo y esta en el test
 
 
