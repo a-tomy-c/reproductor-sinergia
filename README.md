@@ -42,9 +42,11 @@ notas del progreso, info y otros
     - [ ] widget player
     - [x] widget playlist
     - [ ] widget time
-    - [ ] widget volume
+    - [x] widget volume
     - [ ] widget buttons bar
 - ahora todos los test para los widgets sera desde `test_widgets`
 - agregue mas iconos
+- el widget de volume ya tiene su modulo y esta en el test
+
 
 
