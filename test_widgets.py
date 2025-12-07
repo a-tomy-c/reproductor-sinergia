@@ -4,6 +4,7 @@ from PySide6.QtWidgets import QApplication
 # from ui.widget_volume import WidgetVolume
 # from ui.widget_time import WidgetTime
 from ui.widget_buttons_bar import WidgetButtonsBar
+from ui.widget_player import WidgetPlayer
 
 
 if __name__ == "__main__":
@@ -22,7 +23,11 @@ if __name__ == "__main__":
     # wtime.show()
 
     # TEST BUTTONS BAR
-    wbbar = WidgetButtonsBar()
-    wbbar.show()
+    # wbbar = WidgetButtonsBar()
+    # wbbar.show()
+
+    # TEST PLAYER
+    wplayer = WidgetPlayer()
+    wplayer.show()
     
     sys.exit(app.exec())

@@ -3,3 +3,6 @@
 *.ui
 extras/
 temporal/
+test2.py
+**.zip
+
