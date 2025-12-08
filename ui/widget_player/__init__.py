@@ -16,27 +16,30 @@ class WidgetPlayer(QWidget, Ui_WidgetPlayer):
         self.__cnf_WidgetPlayer()
 
     def __cnf_WidgetPlayer(self):
-        self.resize(750, 350)
+        # self.resize(750, 350)
         self.wg_time = WidgetTime()
         self.wg_vol = WidgetVolume()
         self.fr_top.setMaximumHeight(32)
         self.hly_n.addWidget(self.wg_time)
         self.hly_n.addWidget(self.wg_vol)
 
-        self.fr_bot.setMaximumHeight(32)
-        self.bbar = WidgetButtonsBar(self.fr_s)
-        self.hly_s.addWidget(self.bbar)
+        # self.fr_bot.setMaximumHeight(32)
+        # self.bbar = WidgetButtonsBar(self.fr_s)
+        # self.hly_s.addWidget(self.bbar)
 
-        self.split = QSplitter(orientation=Qt.Orientation.Horizontal)
+        # self.split = QSplitter(orientation=Qt.Orientation.Horizontal)
         self.player = Player()
-        self.playlist = WidgetPlaylist()
-        self.split.addWidget(self.playlist)
-        self.split.addWidget(self.player.get_widget())
-        self.hly_center.addWidget(self.split)
+        # self.playlist = WidgetPlaylist()
+        # self.split.addWidget(self.player.get_widget())
+        # self.split.addWidget(self.playlist)
+        # self.hly_center.addWidget(self.split)
+        self.hly_center.addWidget(self.player.get_widget())
+        self.fr_bot.setHidden(True)
+        # self.split.setSizes([60, 40])
 
-        self.bbar.btn_toggle_playlist.toggled.connect(self.toggle_playlist)
+        # self.bbar.btn_toggle_playlist.toggled.connect(self.toggle_playlist)
 
-    def toggle_playlist(self, show:bool):
-        self.playlist.setHidden(show)
+    # def toggle_playlist(self, show:bool):
+    #     self.playlist.setHidden(show)
         
 

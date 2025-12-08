@@ -24,7 +24,7 @@ class Ui_Playlist(object):
         if not Playlist.objectName():
             Playlist.setObjectName(u"Playlist")
         Playlist.resize(340, 460)
-        sizePolicy = QSizePolicy(QSizePolicy.Policy.Ignored, QSizePolicy.Policy.Preferred)
+        sizePolicy = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(Playlist.sizePolicy().hasHeightForWidth())

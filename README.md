@@ -50,7 +50,8 @@ notas del progreso, info y otros
 - el widget de time ya tiene su modulo y esta en el test
 - el widget de buttonsbar ya tiene su modulo y esta en el test
 - junte todos los widget en `widget player`
-- [ ] la playlist lo movere fuera de `widget player` para que no afecte al ancho del player
+- [x] la playlist lo movere fuera de `widget player` para que no afecte al ancho del player
+- toggle playlist ya casi funciona, solo falla cuando se redimension la ventana, cuando se redimensiona con el split va bien
 
 
 
