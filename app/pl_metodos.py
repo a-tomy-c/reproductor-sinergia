@@ -1,7 +1,7 @@
 from PySide6.QtWidgets import QMainWindow, QApplication, QMenu, QPushButton
 from PySide6.QtCore import QTimer, Qt, QSize, QPoint 
 from PySide6.QtGui import QAction, QCursor, QIcon, QScreen, QMouseEvent
-
+from app.sinergia_core import SinergiaCore
 from ui.ui_player import Ui_Player
 
 
@@ -13,6 +13,7 @@ class PlMetodos(QMainWindow, Ui_Player):
 
         self.setupUi(self)
         self.setWindowFlag(Qt.WindowType.FramelessWindowHint)
+        self._init_player()
 
         # --- Atributos para el movimiento de la ventana sin marco ---
         self.old_pos = QPoint() # Almacena la posición anterior del ratón
@@ -28,6 +29,14 @@ class PlMetodos(QMainWindow, Ui_Player):
         self.btSquare.clicked.connect(self.toggleFullScreen)
         self.btClose.clicked.connect(self.close)
         self.btMin.clicked.connect(lambda: self.showMinimized() if not self.isMinimized() else None)
+        self.btPlay.clicked.connect(self.player.togglePlayback)
+        self.btStop.clicked.connect(self.player.stop)
+        self.slVolumen.sliderMoved.connect(self.player.setVolume)
+        self.btBack.clicked.connect(self.player.backward)
+        self.btForward.clicked.connect(self.player.fordward)
+        self.btLista.clicked.connect(self.togglePlaylist)
+        self.reloadConfig()
+        self._test_video()
 
     # --- Métodos para el movimiento de la ventana sin marco ---
     def mousePressEvent(self, event: QMouseEvent):
@@ -93,4 +102,33 @@ class PlMetodos(QMainWindow, Ui_Player):
         else:
             self.showFullScreen()
 
+    def _init_player(self):
+        self.player = SinergiaCore()
+        self.gridPlayer.addWidget(self.player.getWidget())
+        self.frLista.setMinimumWidth(0)
+        self.gridCentral.setColumnStretch(0, 4)
+        self.gridCentral.setColumnStretch(1, 6)
+        
 
+    def _test_video(self):
+        video1 = "./extras/life.mp4"
+        self.player.setMedia(video1)
+
+    def setVolume(self, value:int):
+        self.player.setVolume(value)
+        self.slVolumen.setValue(value)
+
+    def reloadConfig(self):
+        self.setVolume(60)
+
+    def closeEvent(self, _):
+        self.player.stop()
+
+    def showPlaylist(self, show:bool=True):
+        self.frLista.setHidden(not show)
+
+    def togglePlaylist(self):
+        show = True if self.frLista.isHidden() else False
+        self.lbDatos.setText(str(show))
+        self.showPlaylist(show)
+        
