@@ -25,4 +25,6 @@ notas del progreso, info y otros
 
 ### UI
 - se agrego la nueva interfaz
+- cree una nueva clase PlayerSinergia
+
 

@@ -1,12 +1,12 @@
 from PySide6.QtWidgets import QApplication, QStyleFactory
-from app.pl_metodos import PlMetodos
+from app import PlayerSinergia
 
-import sys
 
 if __name__ == "__main__":
     app = QApplication([])
-    sr = PlMetodos()
+    sr = PlayerSinergia()
     sr.show()
+    sr.setMedia(file='/home/tomy/Vídeos/ARCADEA - Exodus of Gravity (Official Visualizer).mp4')
 
     # Obtener la lista de nombres de estilos disponibles
     # estilos_disponibles = QStyleFactory.keys()

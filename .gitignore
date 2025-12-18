@@ -1,5 +1,6 @@
 **/__pycache__/
 *.txt
-*.ui
+*.mp4
 extras/
 temporal/
+
